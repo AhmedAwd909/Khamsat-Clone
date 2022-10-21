@@ -1,0 +1,351 @@
+/* Global */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+
+/* Navbar */
+nav {
+    background-color: #444;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    height: 60px;
+    z-index: 10000;
+}
+nav .left, .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .left {
+    width: 20%;
+    padding: 20px;
+    color: #fff;
+}
+nav .left div {
+    padding: 0 10px;
+    margin-right: 10px;
+}
+nav .left img {
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+nav .left i {
+    padding: 20px;
+}
+nav .left div:hover,
+ .right div:hover,
+ .left i:hover {
+    background-color: #c3c3c3;
+}
+nav .right {
+    width: 55%;
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+nav .right a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff
+}
+nav .right li {
+    list-style: none;
+}
+nav .right img {
+    width: 150px;
+    cursor: pointer;
+}
+nav .right i {
+    font-size: 13px;
+}
+nav .right .toggle {
+    font-size: 25px;
+    cursor: pointer;
+}
+nav .right div {
+    padding: 12px
+}
+
+/* Cover */
+.cover {
+    background-image: url("../images/cover.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.cover .heading {
+    text-align: center
+}
+.cover .heading h1 {
+    font-size: 37px;
+    color: #222222;
+    margin-top: -10px;
+}
+.cover .heading p {
+    font-size: 20px;
+    color: #222222;
+    margin-top: -25px;
+    margin-bottom: 32px;
+}
+.cover .heading form {
+    position: relative;
+}
+.cover .heading form input[type="search"] {
+    padding: 25px 20px;
+    width: 700px;
+    border: .5px solid #ccc;
+    outline: none;
+    text-align: right;
+    font-size: 20px;
+}
+.cover .heading form input[type="search"]:-moz-placeholder {
+    text-align: right;
+    font-size: 17px
+}
+.cover .heading form input[type="search"]:-ms-input-placeholder {
+    text-align: right;
+    font-size: 17px
+}
+.cover .heading form input[type="search"]::-webkit-input-placeholder {
+    text-align: right;
+    font-size: 17px
+}
+.cover .heading form input[type="submit"] {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    padding: 19px 30px;
+    background-color: #52b035;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+.cover .heading form input[type="submit"]:hover {
+    background-color: #45962c;
+}
+
+/* Categories */
+.categories .row {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    padding: 10px; 
+}
+.categories .row .img {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+    cursor: pointer
+}
+.categories .row img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1
+}
+.categories {
+    margin: 80px 10px;
+}
+.categories  h2{
+    text-align: center;
+    font-size: 29px;
+    font-weight: normal;
+} 
+.categories .img::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0.4;
+    height: 100%;
+    width: 100%;
+}
+.categories .img h4 {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    z-index: 1000
+}  
+
+/* Service */
+.container {
+    display: flex;
+}
+.service {
+    background-color: #eee;
+    height: 430px;
+    padding: 0px 10px;
+}
+.service .head-button {
+    display: flex;
+    justify-content: space-between;
+}
+.service .head-button h3 {
+    margin: 50px 10px 10px;
+}
+.service .head-button button {
+    height: 40px;
+    width: 100px;
+    margin: 50px 10px 10px;
+    font-size: 17px;
+    color: #52b035;
+}
+.service .head-button button:hover {
+    background-color: #45962c;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+.service .container div {
+    padding: 10px;
+    text-align: right;
+}
+.service .container div img {
+    width: 100%;
+    cursor: pointer;
+}
+.service .container h5 {
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: -12px;
+}
+.service .container p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: -2px;
+}
+.service .container .start {
+    color: #000;
+    margin-top: 0;
+}
+.service .container .rate {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+}
+.service .container i {
+    font-size: 13px;
+    margin-top: 0;
+    padding: 0px;
+    color: #ff8100;
+}
+.service .container span {
+    color: #666;
+    font-size: 15px;
+}
+.service .container .price {
+    font-weight: bold;
+    color: #000
+}
+.service.last {
+    padding-bottom: 100px;
+}
+
+/* Links */
+.links {
+    padding: 20px;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+}
+.links div {
+    width: 25%;
+}
+.links div h4 {
+    color: #1b1c1d;
+    font-weight: bold;
+}
+.links div a {
+    display: block;
+    text-decoration: none;
+    color: #52b035;
+    font-size: 15px;
+}
+.links div i {
+    font-size: 35px;
+    padding-left: 15px;
+}
+.links div i.twitter {
+    color: cornflowerblue;
+}
+.links div i.facebook {
+    color: blue;
+}
+.links div img {
+    width: 50px;
+    padding: 0 3px
+}
+.links div form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 20px;
+    background-color: #f1f1f1;
+}
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+footer h5 {
+    font-weight: normal;
+    font-size: 12px;
+    color: #666;
+}
+footer div a {
+    margin: 0 10px;
+
+    font-size: 15px;
+}
+
+/* Hsoub */
+.hsoub {
+    padding: 40px 200px;
+}
+.hsoub img {
+    height: 36px;
+    margin: auto;
+    display: flex;
+}
+.hsoub .container {
+    display: flex;
+    text-align: right;
+}
+.hsoub .container div {
+    margin: 0 15px;
+}
+.hsoub .container h5 {
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+.hsoub .container p {
+    font-size: 10px;
+    color: #666;
+    cursor: pointer;
+}
